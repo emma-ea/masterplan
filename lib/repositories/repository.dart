@@ -16,3 +16,4 @@ class Model {
 
   const Model({required this.id, this.data = const {}});
 }
+

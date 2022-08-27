@@ -25,7 +25,7 @@ class PlanServices {
   }
 
   void addTask(Plan plan, String description) {
-    final id = plan.tasks.last.id;
+    final id = plan.id;
     final task = Task(id: id, description: description);
     plan.tasks.add(task);
     savePlan(plan);

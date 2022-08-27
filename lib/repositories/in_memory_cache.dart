@@ -12,7 +12,7 @@ class InMemoryCache implements Repository {
   Model create() {
     final ids = _storage.keys.toList()..sort();
     final id = (ids.isEmpty) ? 1 : ids.last + 1;
-    final model = Model(id: id);
+    final model = Model(id: id); // , data: {"name": "", "tasks": []}
     _storage[id] = model;
     return model;
   }
@@ -36,4 +36,5 @@ class InMemoryCache implements Repository {
   void update(Model item) {
     _storage[item.id] = item;
   }
+
 }
