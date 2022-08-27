@@ -1,8 +1,9 @@
 import '../models/data_layer.dart';
 import '../services/plan_services.dart';
+import '../di/locator.dart';
 
 class PlanController {
-  final _services = PlanServices();
+  final PlanServices _services = locator<PlanServices>();
 
   List<Plan> get plans => List.unmodifiable(_services.getAllPlans());
 

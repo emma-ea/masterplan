@@ -1,9 +1,9 @@
 import '../repositories/repository.dart';
-import '../repositories/in_memory_cache.dart';
 import '../models/data_layer.dart';
+import '../di/locator.dart';
 
 class PlanServices {
-  final Repository _repository = InMemoryCache();
+  final Repository _repository = locator<Repository>();
 
   Plan createPlan(String name) {
     final model = _repository.create();

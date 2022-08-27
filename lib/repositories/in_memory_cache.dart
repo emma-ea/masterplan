@@ -1,7 +1,7 @@
 import './repository.dart';
 
 class InMemoryCache implements Repository {
-  final _storage = <int, Model>{};
+  final Map<int, Model> _storage = <int, Model>{};
 
   @override
   void clear() {
